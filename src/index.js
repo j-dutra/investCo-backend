@@ -1,10 +1,10 @@
 const express = require('express')
-const controler = require('./controller/controller')
+const router = require('./controller/controller')
 
 const app = express()
 const port = 3000;
 app.use(express.json())
-app.use("/user", controler)
+app.use("/", router)
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
 });
